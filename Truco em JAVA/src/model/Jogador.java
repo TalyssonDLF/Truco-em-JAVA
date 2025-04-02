@@ -1,13 +1,49 @@
-/*
-Classe Jogador.java
+impot java.util.ArrayList;
+import java.util.List;
 
-Atributos:
-- String nome
-- List<Carta> mao (contém exatamente 3 cartas)
-- int pontuacao (pontuação do jogador ou dupla)
+public class jogador{
+    private String nome;
+    private int pontos;
+    List<Carta> mao;
 
-Métodos principais:
-- receberCarta(Carta carta): adiciona carta à mão do jogador.
-- jogarCarta(int posicao): joga e remove carta específica da mão.
-- adicionarPontos(int pontos): incrementa pontuação do jogador.
-*/
+    jogador(String nome){
+        this.nome = nome;
+        this.pontos = 0;
+        this.mao = new ArrayList<Carta>();
+    }
+
+    public void setPontos(int pontos){
+        this.pontos = pontos;
+    }
+
+    public int getPontos(){
+        return this.pontos;
+    }
+
+    public String getNome(){
+        return this.nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public list<Carta> getMao(){
+        return Mao;
+    }
+
+    public void verMao(){
+        for(Carta c : this.mao){
+            System.out.println(carta.getNome());
+        }
+    }
+
+    public void getCarta(Carta c){
+        this.mao.add(c);
+    }
+
+    public Carta jogarCarta(){
+        return this.mao.remove(posicao-1);
+    }
+
+}
